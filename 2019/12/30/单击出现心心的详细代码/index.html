@@ -7,16 +7,21 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>标签: 笔记 - Luciano の blog</title>
+<title>单击出现心心的详细代码 - Luciano の blog</title>
 
 
-    <meta property="og:type" content="website">
-<meta property="og:title" content="Luciano の blog">
-<meta property="og:url" content="http://yoursite.com/tags/%E7%AC%94%E8%AE%B0/index.html">
+    <meta name="description" content="在很多博客中，单击鼠标会出现动画效果，例如连续单击某处会出现很多浮动的心心，具体怎么实现，下面看代码的注释。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="单击出现心心的详细代码">
+<meta property="og:url" content="http://yoursite.com/2019/12/30/%E5%8D%95%E5%87%BB%E5%87%BA%E7%8E%B0%E5%BF%83%E5%BF%83%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="Luciano の blog">
+<meta property="og:description" content="在很多博客中，单击鼠标会出现动画效果，例如连续单击某处会出现很多浮动的心心，具体怎么实现，下面看代码的注释。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
+<meta property="article:published_time" content="2019-12-30T03:32:15.000Z">
+<meta property="article:modified_time" content="2019-12-30T03:42:50.007Z">
 <meta property="article:author" content="Luciano">
+<meta property="article:tag" content="javascript">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
@@ -76,7 +81,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Luciano の blog" height="28">
+                <img src="/images/logo.svg" alt="单击出现心心的详细代码" height="28">
             
             </a>
         </div>
@@ -125,54 +130,59 @@
     <section class="section">
         <div class="container">
             <div class="columns">
-                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main"><div class="card">
-    <div class="card-content">
-        <nav class="breadcrumb" aria-label="breadcrumbs">
-        <ul>
-            <li><a href="/tags">标签</a></li>
-            <li class="is-active"><a href="#" aria-current="page">笔记</a></li>
-        </ul>
-        </nav>
-    </div>
-</div>
-
-    
+                <div class="column is-8-tablet is-8-desktop is-8-widescreen has-order-2 column-main">
 <div class="card">
     
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-12T03:57:23.000Z">2019-12-12</time>
+                <time class="level-item has-text-grey" datetime="2019-12-30T03:32:15.000Z">2019-12-30</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+                </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    5 分钟 读完 (大约 753 个字)
+                    4 分钟 读完 (大约 537 个字)
                 </span>
                 
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span>次访问
+                </span>
                 
             </div>
         </div>
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/12/12/Markdown%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95-%E4%BD%BF%E7%94%A8Typora/">Markdown基础用法--使用Typora</a>
+                单击出现心心的详细代码
             
         </h1>
         <div class="content">
-            <h1 id="Markdown-简介"><a href="#Markdown-简介" class="headerlink" title="Markdown 简介"></a>Markdown 简介</h1><p>Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档。本基础教程在Typora下演示使用方法。</p>
+            <p>在很多博客中，单击鼠标会出现动画效果，例如连续单击某处会出现很多浮动的心心，具体怎么实现，下面看代码的注释。</p>
+<a id="more"></a>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">			<span class="comment">// 整个大函数是自执行函数</span></span><br><span class="line">			! <span class="function"><span class="keyword">function</span>(<span class="params">e, t, a</span>) </span>&#123;</span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					c(</span><br><span class="line">						<span class="comment">//此处定义心心的形状，由一个正方形和两个直径等于正方形的边的伪类圆形组成，圆形各自向上移半径的距离，整体旋转了45度</span></span><br><span class="line">						<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span></span><br><span class="line">					), o(), r()</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">//递归调用动画</span></span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					<span class="comment">//判断数组d是否还存在元素</span></span><br><span class="line">					<span class="keyword">for</span> (<span class="keyword">var</span> e = <span class="number">0</span>; e &lt; d.length; e++) d[e].alpha &lt;= <span class="number">0</span> ? (t.body.removeChild(d[e].el), d.splice(e, <span class="number">1</span>)) : (d[e].y--, d[</span><br><span class="line">							e].scale += <span class="number">.004</span>, d[e].alpha -= <span class="number">.013</span>, d[e].el.style.cssText = <span class="string">"left:"</span> + d[e].x + <span class="string">"px;top:"</span> + d[e].y +</span><br><span class="line">						<span class="string">"px;opacity:"</span> + d[e].alpha + <span class="string">";transform:scale("</span> + d[e].scale + <span class="string">","</span> + d[e].scale + <span class="string">") rotate(45deg);background:"</span> +</span><br><span class="line">						d[e].color + <span class="string">";z-index:99999"</span>); <span class="comment">//动画：改变心心位置，透明度，大小</span></span><br><span class="line">					requestAnimationFrame(r)</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">//检测点击事件</span></span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					<span class="keyword">var</span> t = <span class="string">"function"</span> == <span class="keyword">typeof</span> e.onclick &amp;&amp; e.onclick;</span><br><span class="line">					e.onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">						t &amp;&amp; t(), i(e)</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="comment">//创建DOM元素div heart，每生成一个心心就加入数组d，并插入&lt;body&gt;标签中</span></span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">var</span> a = t.createElement(<span class="string">"div"</span>);</span><br><span class="line">					a.className = <span class="string">"heart"</span>, d.push(&#123;</span><br><span class="line">						el: a,</span><br><span class="line">						x: e.clientX - <span class="number">5</span>,</span><br><span class="line">						y: e.clientY - <span class="number">5</span>,</span><br><span class="line">						scale: <span class="number">1</span>,</span><br><span class="line">						alpha: <span class="number">1</span>,</span><br><span class="line">						color: s()</span><br><span class="line">					&#125;), t.body.appendChild(a)</span><br><span class="line">				&#125;</span><br><span class="line"></span><br><span class="line">				<span class="comment">//创建heart的样式，并插入&lt;head&gt;标签中</span></span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">					<span class="keyword">var</span> a = t.createElement(<span class="string">"style"</span>);</span><br><span class="line">					a.type = <span class="string">"text/css"</span>;</span><br><span class="line">					<span class="keyword">try</span> &#123;</span><br><span class="line">						a.appendChild(t.createTextNode(e))</span><br><span class="line">					&#125; <span class="keyword">catch</span> (t) &#123;</span><br><span class="line">						a.styleSheet.cssText = e</span><br><span class="line">					&#125;</span><br><span class="line">					t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)</span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="comment">//随机颜色</span></span><br><span class="line">				<span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> <span class="string">"rgb("</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">","</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">","</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">")"</span></span><br><span class="line">				&#125;</span><br><span class="line">				</span><br><span class="line">				<span class="comment">//首先声明一个数组，用于存放心心元素</span></span><br><span class="line">				<span class="keyword">var</span> d = [];</span><br><span class="line">				<span class="comment">//H5的API：requestAnimationFrame()，该函数传入回调函数，告诉浏览器在重绘之前所要执行的函数</span></span><br><span class="line">				e.requestAnimationFrame = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">					<span class="keyword">return</span> e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame ||</span><br><span class="line">						e.msRequestAnimationFrame || <span class="function"><span class="keyword">function</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">							setTimeout(e, <span class="number">1e3</span> / <span class="number">60</span>)</span><br><span class="line">						&#125;</span><br><span class="line">				&#125;(), n()</span><br><span class="line">			&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br><span class="line">		&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>将以上代码保存为love.js文件，放到博客主题文件夹<code>/source/js/src</code>中，然后在<code>footer.ejs</code>中插入：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--鼠标点击爱心动画--&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/love.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
         </div>
         
-        
-        <div class="level is-mobile">
+        <div class="level is-size-7 is-uppercase">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/12/12/Markdown%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95-%E4%BD%BF%E7%94%A8Typora/#more">阅读更多</a>
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/javascript/" rel="tag">javascript</a>
                 </div>
             </div>
         </div>
+        
         
         
     </div>
@@ -182,9 +192,42 @@
 
 
 
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/12/12/Markdown%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95-%E4%BD%BF%E7%94%A8Typora/">
+                <span class="level-item">Markdown基础用法--使用Typora</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
 
 
 
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">评论</h3>
+        
+<div id="valine-thread" class="content"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread' ,
+        notify: false,
+        verify: true,
+        app_id: 'pg3xTIEQNh0peQY7rxElf7FM-gzGzoHsz',
+        app_key: 'zY64oUDvr5IMtD6yXYEA20cO',
+        placeholder: '请留下你的评论吧~'
+    });
+</script>
+
+    </div>
+</div>
 </div>
                 
 
@@ -210,7 +253,7 @@
                     
                     
                     <p class="is-size-6 is-block">
-                        一个苟延残喘的伪前端
+                        浮躁的事情太多  在这里静一静
                     </p>
                     
                     
@@ -242,7 +285,7 @@
                     </p>
                     <a href="/categories">
                         <p class="title has-text-weight-normal">
-                            0
+                            2
                         </p>
                     </a>
                 </div>
@@ -254,7 +297,7 @@
                     </p>
                     <a href="/tags">
                         <p class="title has-text-weight-normal">
-                            1
+                            2
                         </p>
                     </a>
                 </div>
@@ -314,8 +357,15 @@
             <div class="field is-grouped is-grouped-multiline">
                 
                 <div class="control">
-                    <a class="tags has-addons" href="/tags/%E7%AC%94%E8%AE%B0/">
-                        <span class="tag">笔记</span>
+                    <a class="tags has-addons" href="/tags/javascript/">
+                        <span class="tag">javascript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/markdown/">
+                        <span class="tag">markdown</span>
                         <span class="tag is-grey">1</span>
                     </a>
                 </div>
@@ -335,10 +385,10 @@
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-27T15:43:23.989Z">2019-12-27</time></div>
-                    <a href="/2019/12/27/hello-world/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Hello World</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-30T03:32:15.000Z">2019-12-30</time></div>
+                    <a href="/2019/12/30/%E5%8D%95%E5%87%BB%E5%87%BA%E7%8E%B0%E5%BF%83%E5%BF%83%E7%9A%84%E8%AF%A6%E7%BB%86%E4%BB%A3%E7%A0%81/" class="title has-link-black-ter is-size-6 has-text-weight-normal">单击出现心心的详细代码</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a>
                     </p>
                 </div>
             </div>
@@ -351,7 +401,7 @@
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-12-12T03:57:23.000Z">2019-12-12</time></div>
                     <a href="/2019/12/12/Markdown%E5%9F%BA%E7%A1%80%E7%94%A8%E6%B3%95-%E4%BD%BF%E7%94%A8Typora/" class="title has-link-black-ter is-size-6 has-text-weight-normal">Markdown基础用法--使用Typora</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
                     </p>
                 </div>
             </div>
@@ -368,7 +418,23 @@
                 分类
             </h3>
             <ul class="menu-list">
-            
+            <li>
+        <a class="level is-marginless" href="/categories/%E5%89%8D%E7%AB%AF/">
+            <span class="level-start">
+                <span class="level-item">前端</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/%E7%AC%94%E8%AE%B0/">
+            <span class="level-start">
+                <span class="level-item">笔记</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
             </ul>
         </div>
     </div>
@@ -415,7 +481,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Luciano の blog" height="28">
+                    <img src="/images/logo.svg" alt="单击出现心心的详细代码" height="28">
                 
                 </a>
                 <p class="is-size-7">
